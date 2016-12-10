@@ -16,7 +16,7 @@ app.controller('ProductsCtrl', function($scope, $state, ProductsSrv, UserCartSrv
       $scope.addToCart = (item) => {
         item.productQty = $scope.productQty;
         $scope.cartstorage = UserCartSrv.cartStorage(item);
-    }
+    };
 
 
 });

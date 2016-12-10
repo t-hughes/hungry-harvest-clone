@@ -12,7 +12,7 @@
                 <!-- <img src="http://www.freefoodphotos.com/imagelibrary/herbs/slides/chilis.jpg" class="img-responsive" alt=""> -->
 				<img class="img-responsive" ng-src="{{ product.product_image }}" alt="" />
                 <div>
-                  <a ui-sref="productDetails({id: product.product_id})" class="btn">View</a>
+                  <button class="btn">View</button>
                 </div>
               </div>
               <h3><a href="">{{ product.product_name }}</a></h3>
@@ -20,6 +20,8 @@
               <a class="btn add2cart" ng-click="addToCart(product)">Add to cart</a>
             </div>
         </div>
+    
+    
 	</div>
 </div>
 </section>
