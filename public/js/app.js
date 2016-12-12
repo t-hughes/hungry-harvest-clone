@@ -17,6 +17,12 @@ app.config(function($urlRouterProvider, $stateProvider) {
         controller: 'ProductsCtrl'
     })
 
+    .state('productDetails', {
+        url: '/productDetails',
+        templateUrl: 'views/productDetails.html',
+        controller: 'ProductsCtrl'
+    })
+
     .state('userCart', {
         url: '/userCart',
         templateUrl: 'views/userCart.html',
@@ -33,5 +39,8 @@ app.config(function($urlRouterProvider, $stateProvider) {
         url: '/about',
         templateUrl: 'views/about.html'
     });
+
+
+
 
 });

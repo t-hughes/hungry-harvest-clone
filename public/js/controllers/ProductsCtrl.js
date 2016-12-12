@@ -2,7 +2,7 @@ app.controller('ProductsCtrl', function($scope, $state, ProductsSrv, UserCartSrv
 
     $scope.getProduct = ProductsSrv.getProduct($state.params.id)
           .then(function(response) {
-            $scope.productID = response.data;
+            $scope.product = response.data;
           });
 
           $scope.getAllProducts = ProductsSrv.getAllProducts()
@@ -18,5 +18,5 @@ app.controller('ProductsCtrl', function($scope, $state, ProductsSrv, UserCartSrv
         $scope.cartstorage = UserCartSrv.cartStorage(item);
     };
 
-
 });
+
