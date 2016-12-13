@@ -1,6 +1,7 @@
-# ugly-sweater
-Ugly Sweater Ecommerce Site
-This is my first full-stack project done at DevMountain. It was built with:
+# Happy-Harvest
+Happy Harvest Ecommerce "Clone"
+This was my first full-stack project done at DevMountain. It was built with:
 Angular 1.5.8
 Node.js
-PostgreSQL with MassiveJS
+PostgreSQL/MassiveJS
+HTML5/CSS3

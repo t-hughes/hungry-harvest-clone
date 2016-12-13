@@ -1,32 +1,36 @@
 <section>
     <div class="container">
-		<div class="row">
-			<div class="col-xs-12">
-				<div class="panel panel-default  panel--styled">
-					<div class="panel-body">
-						<div class="col-md-12 panelTop">
-							<div class="col-md-4">
-								<img class="img-responsive" ng-src="{{productID.product_image}}" alt=""/>
-							</div>
-							<div class="col-md-8">
-								<h2>{{productID.product_name}}</h2>
-								<p>{{productID.product_desc}}</p><br />
-                                <p>{{productID.product_features}}</p><br />
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel panel-default  panel--styled">
+                    <div class="panel-body">
+                        <div class="col-md-12 panelTop">
+                            <div class="col-md-4">
+                                <img class="img-responsive" ng-src="{{productID.product_image}}" alt=""/>
+                            </div>
+                            <div class="col-md-8">
+                                <h2>{{productID.product_name}}</h2>
+                                <p>{{productID.product_desc}}</p><br/>
+                                <p>{{productID.product_features}}</p><br/>
                                 <p>{{productID.product_serving}}</p>
-							</div>
-						</div>
+                            </div>
+                        </div>
 
-						<div class="col-md-12 panelBottom">
-							<div class="col-md-4 text-center">
-								<button class="btn btn-lg btn-add-to-cart" ui-sref="products"><span class="fa fa-arrow-left"></span> Back to Packages</button>
-							</div>
-							<div class="col-md-4 text-left">
-								<h5>Price <span class="itemPrice">{{productID.product_price | currency}}</span></h5>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+                        <div class="col-md-12 panelBottom">
+                            <div class="col-md-4 text-center">
+                                <button class="btn btn-lg btn-add-to-cart" ui-sref="products">
+                                    <span class="fa fa-arrow-left"></span>
+                                    Back to Packages</button>
+                            </div>
+                            <div class="col-md-4 text-left">
+                                <h5>Price
+                                    <span class="itemPrice">{{productID.product_price | currency}}</span>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
