@@ -1,4 +1,5 @@
 module.exports = {
-    database: 'postgres://nquxuraf:R69PmJpCLiSFF8GyFf8svmrbmSnRbd1z@elmer.db.elephantsql.com:5432/nquxuraf',
-    // secret:
+    // secret: '',
+    database: process.env.DATABASE_URL
+    // database: 'postgres://postgres:Dec170ct131989@localhost/uglysweaters' //Local DB
 };
