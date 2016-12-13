@@ -28,7 +28,7 @@ let endpoints = ['customers', 'products', 'orders', 'order_details'];
 
 endpoints.forEach(endpoint => {
     app.get(`/api/${endpoint}/:id`, restCtrl.read(endpoint));
-    app.get(`/api/${endpoint}/`, restCtrl.readList(endpoint));
+    app.get(`/api/${endpoint}/:id`, restCtrl.readList(endpoint));
     app.post(`/api/${endpoint}/`, restCtrl.create(endpoint));
     app.put(`/api/${endpoint}/:id`, restCtrl.update(endpoint));
     app.delete(`/api/${endpoint}/:id`, restCtrl.delete(endpoint));
