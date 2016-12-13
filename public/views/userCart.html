@@ -1,6 +1,8 @@
 <section>
 <div class="container">
     <div class="row">
+        <h1 class="text-center" ng-if="cartQty() === 0">Oh no! There is nothing in your cart!</h1>
+        <h2 class="text-center" ng-if="cartQty() === 0">Go check out some <a ui-sref="products">packages!</a></h2><br />
         <div class="col-sm-12 col-md-10 col-md-offset-1">
             <table class="table table-hover">
                 <thead>
@@ -57,7 +59,7 @@
                         </button></td>
                         <td>
                         <button ui-sref="userCheckout" type="button" class="btn btn-success">
-                            Checkout <span class="fa fa-caret-square-o-right"></span>
+                            Checkout <span class="fa fa-arrow-right"></span>
                         </button></td>
                     </tr>
                 </tbody>

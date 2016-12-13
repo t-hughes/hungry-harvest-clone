@@ -8,9 +8,6 @@ body {
   padding-bottom: 100px;
 }
 
-.text-muted {
-  color: #777;
-}
 .text-primary {
   color: #FED136;
 }
@@ -306,7 +303,7 @@ fieldset[disabled] .btn-xl.active {
     font-size: 12px;
 }
 .product-item .btn:hover {
-    background: #e84d1c;
+    background: #FED136;
     border-color: #c8c8c8;
 }
 
@@ -316,30 +313,57 @@ fieldset[disabled] .btn-xl.active {
     padding-bottom: 4px;
     text-transform: uppercase;
 }
-.product-item h3 a {
-    color: #3e4d5c;
-}
-.product-item h3 a:hover {
-    color: #E02222;
-}
+
 .pi-price {
-    color: #e84d1c;
+    color: #FED136;
     font-size: 18px;
     float: left;
     padding-top: 1px;
 }
 .product-item .add2cart {
     float: right;
-    color: #a8aeb3;
-    border: 1px #ededed solid;
+    color: #A8AEB3;
+    border: 1px #EDEDED solid;
     padding: 3px 6px;
     text-transform: uppercase;
 }
-        .product-item .add2cart:hover {
-            color: #fff;
-            background: #e84d1c;
-            border-color: #e84d1c;
-        }
+.product-item .add2cart:hover {
+    color: #FFF;
+    background: #FED136;
+    border-color: #FED136;
+}
+
+        /*PRODUCT DETAILS*/
+.panel.panel--styled {
+    background: #F4F2F3;
+}
+.panelTop {
+    padding: 30px;
+}
+
+.panelBottom {
+    border-top: 1px solid #E7E7E7;
+    padding-top: 20px;
+}
+.btn-add-to-cart {
+    background: #FED136;
+    color: #FFF;
+}
+.btn.btn-add-to-cart.focus, .btn.btn-add-to-cart:focus, .btn.btn-add-to-cart:hover  {
+    color: #FFF;
+    background: #FED136;
+    outline: none;
+}
+.btn-add-to-cart:active {
+    background: #FED136;
+    outline: none;
+}
+
+
+.itemPrice {
+    font-size: 24px;
+    color: #FED136;
+}
 
 
 
@@ -402,21 +426,3 @@ ul.social-buttons li a:active {
     background-color: #222;
     color: #FED136;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

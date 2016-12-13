@@ -1,3 +1,4 @@
-app.service('UserCheckoutSrv', function () {
+app.service('UserCheckoutSrv', function ($http) {
+
 
 });

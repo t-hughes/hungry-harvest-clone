@@ -1,4 +1,4 @@
-app.controller('UserCheckoutCtrl', function($scope, UserCartSrv) {
+app.controller('UserCheckoutCtrl', function($scope, $state, UserCheckoutSrv, UserCartSrv, ProductsSrv) {
 
     // Get Subtotal
     $scope.subtotal = () => {
@@ -14,4 +14,5 @@ app.controller('UserCheckoutCtrl', function($scope, UserCartSrv) {
       return UserCartSrv.grandtotal();
     };
 
+    
 });
