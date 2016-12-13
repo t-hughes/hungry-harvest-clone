@@ -5,7 +5,7 @@ let express = require('express'),
     session = require('express-session'),
     // passport = require('passport'),
     // FacebookStrategy = require('passport-facebook').Strategy,
-    port = process.env.PORT || 80;
+    port = process.env.PORT || 2000;
 
 // TODO Setup localAuth for admin and possible user if you want to do user logins
 
