@@ -404,14 +404,6 @@ section h3.section-subheading {
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-
-/*CHECKOUT*/
-
-.panel-info>.panel-heading {
-    background-color: #222;
-    color: #FED136;
-}
-
 .back2-productsBtn {
     color: #FED136;
     background: #FFF;
@@ -452,6 +444,33 @@ section h3.section-subheading {
 }
 
 .go2-checkoutBtn:active {
+    background: #FED136;
+}
+
+/*CHECKOUT*/
+
+.panel-info>.panel-heading {
+    background-color: #222;
+    color: #FED136;
+}
+
+.checkout-btn {
+    color: #FED136;
+    background: #FFF;
+    font-weight: 700;
+    float: right;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-top: 45px;
+}
+
+.checkout-btn:hover {
+    color: #222;
+    background: #FED136;
+}
+
+.checkout-btn:active {
     background: #FED136;
 }
 

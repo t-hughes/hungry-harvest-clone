@@ -34,10 +34,10 @@
                                 </div>
                             </td>
                             <td class="col-sm-1 col-md-1" style="text-align: center">
-                                <input type="number" min="0" ng-model="cartitem.productQty" ng-change="updateQty()">
+                                <input type="number" min="1" ng-model="cartitem.productQty" ng-change="updateQty()">
                             </td>
                             <td class="col-sm-1 col-md-1 text-center">
-                                <strong>{{ product.product_price * productQty | currency }}</strong>
+                                <strong>{{ cartitem.product_price | currency }}</strong>
                             </td>
                             <td class="col-sm-1 col-md-1">
                                 <button type="button" class="btn btn-danger" ng-click="removeItem($index)">
