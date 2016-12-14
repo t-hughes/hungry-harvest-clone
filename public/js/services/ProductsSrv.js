@@ -10,7 +10,7 @@ app.service('ProductsSrv', function($http) {
     this.getProduct = function(id) {
         return $http({
           method: 'GET',
-          url: `/api/products/${id}`
+          url: '/api/products/'
         });
       };
 

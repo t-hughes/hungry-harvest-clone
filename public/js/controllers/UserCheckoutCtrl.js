@@ -46,6 +46,7 @@ app.controller('UserCheckoutCtrl', function($scope, $state, UserCheckoutSrv, Use
     // Add Order
     $scope.addOrder = () => {
         UserCheckoutSrv.addOrder($scope.customerDetails, order, orderDetails);
+        console.log('derp');
 
         // Thank for order
         swal({
