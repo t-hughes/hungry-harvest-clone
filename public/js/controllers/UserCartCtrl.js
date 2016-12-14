@@ -1,39 +1,41 @@
-app.controller('UserCartCtrl', function($scope, UserCartSrv, UserCheckoutSrv, ProductsSrv) {
+app.controller('UserCartCtrl', function($scope, UserCartSrv) {
 
     // Get Cart Items
-    $scope.cart = UserCartSrv.getCart();
+$scope.cart = UserCartSrv.getCart();
 
-    // Cart Quantity
-    $scope.cartQty = () => {
-        return $scope.cart.reduce((previous, current) => + current.productQty + previous, 0);
-    };
+// Cart Quantity
+$scope.cartQty = () => {
+  return $scope.cart.reduce((previous, current) => +current.productQty + previous, 0);
+};
 
-    // Update Quantity & Pricing
-    $scope.updateQty = () => {
-        UserCartSrv.updateCart($scope.cart);
-        $scope.subtotal();
-        $scope.tax();
-        $scope.grandtotal();
-    };
+// Update Quantity & Pricing
+$scope.updateQty = () => {
+  UserCartSrv.updateCart($scope.cart);
+  $scope.subtotal();
+  $scope.tax();
+  $scope.grandtotal();
+};
 
-    // Remove Cart Items
-    $scope.removeItem = ($index) => {
-        UserCartSrv.removeItem($index);
-    };
 
-    // Cart Math Here
+// Remove Cart Items
+$scope.removeItem = ($index) => {
+  UserCartSrv.removeItem($index);
+};
 
-    // Get Subtotal
-    $scope.subtotal = () => {
-        return UserCartSrv.subtotal();
-    };
+// Cart Math Here
 
-    $scope.tax = () => {
-        return UserCartSrv.tax();
-    };
+// Get Subtotal
+$scope.subtotal = () => {
+  return UserCartSrv.subtotal();
+};
 
-    // Grand Total
-    $scope.grandtotal = () => {
-        return UserCartSrv.grandtotal();
-    };
+$scope.tax = () => {
+  return UserCartSrv.tax();
+};
+
+// Grand Total
+$scope.grandtotal = () => {
+  return UserCartSrv.grandtotal();
+};
+
 });

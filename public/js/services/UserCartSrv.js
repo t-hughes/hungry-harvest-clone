@@ -1,48 +1,52 @@
 app.service('UserCartSrv', function() {
+
     let cart = [],
-        subtotal = 0,
-        tax = 0,
-        grandtotal = 0;
+    subtotal = 0,
+    tax = 0,
+    grandtotal = 0;
 
-    // Add Items to Cart
-    this.cartStorage = (item) => {
-        cart.push(item);
-    };
 
-    // Update Cart
-    this.updateCart = (updatedCart) => {
-        cart = updatedCart;
-    };
+// Add Items to Cart
+this.cartStorage = (item) => {
+  cart.push(item);
+};
 
-    // Get Cart Items
-    this.getCart = () => {
-        return cart;
-    };
+// Update Cart
+this.updateCart = (updatedCart) => {
+  cart = updatedCart;
+};
 
-    // Delete Cart Items
-    this.removeItem = ($index) => {
-        cart.splice($index, 1);
-    };
+// Get Cart Items
+this.getCart = () => {
+  return cart;
+};
 
-    // Reset Cart
-    this.resetCart = () => {
-        cart.length = 0;
-    };
+// Delete Cart Items
+this.removeItem = ($index) => {
+  cart.splice($index, 1);
+};
 
-    this.subtotal = () => {
-        subtotal = cart.reduce((previous, current) => (+ current.product_price * current.productQty) + previous, 0);
-        return subtotal;
-    };
+// Reset Cart
+this.resetCart = () => {
+  cart.length = 0;
+};
 
-    // Get Tax
-    this.tax = () => {
-        tax = subtotal * 0.0685;
-        return tax;
-    };
+// Get Subtotal
+this.subtotal = () => {
+  subtotal = cart.reduce((previous, current) => (+current.product_price * current.productQty) + previous, 0);
+  return subtotal;
+};
 
-    // Get Grand Total
-    this.grandtotal = () => {
-        grandtotal = subtotal + tax;
-        return grandtotal;
-    };
+// Get Tax
+this.tax = () => {
+  tax = subtotal * 0.0685;
+  return tax;
+};
+
+// Get Grand Total
+this.grandtotal = () => {
+  grandtotal = subtotal + tax;
+  return grandtotal;
+};
+
 });

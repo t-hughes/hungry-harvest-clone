@@ -1,10 +1,7 @@
-app.controller('ProductsCtrl', function($scope, $state, ProductsSrv, UserCartSrv, UserCheckoutSrv) {
+app.controller('ProductsCtrl', function($scope, ProductsSrv, UserCartSrv) {
 
-    $scope.getProduct = ProductsSrv.getProduct($state.params.id).then(function(response) {
-        $scope.productID = response.data;
-    });
-
-    $scope.getAllProducts = ProductsSrv.getAllProducts().then(function(response) {
+    $scope.getAllProducts = ProductsSrv.getAllProducts()
+      .then(function(response) {
         $scope.products = response.data;
     });
 
@@ -12,9 +9,11 @@ app.controller('ProductsCtrl', function($scope, $state, ProductsSrv, UserCartSrv
 
     // Send Product to Cart
     $scope.addToCart = (item) => {
-        item.productQty = $scope.productQty;
-        $scope.cartstorage = UserCartSrv.cartStorage(item);
-
+      item.productQty = $scope.productQty;
+      $scope.cartstorage = UserCartSrv.cartStorage(item);
     };
+
+
+    
 
 });

@@ -16,7 +16,7 @@
                         </div>
                     </div>
                     <h3>{{ product.product_name }}</h3>
-                    <div class="pi-price">{{ product.product_price | currency }}</div>
+                    <div class="pi-price">{{ product.product_price * productQty | currency }}</div>
                     <a class="btn add2cart" ng-click="addToCart(product)">Add to cart</a>
                 </div>
             </div>

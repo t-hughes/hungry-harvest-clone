@@ -22,20 +22,22 @@
                         <tr ng-repeat="cartitem in cart track by $index">
                             <td class="col-sm-8 col-md-6">
                                 <div class="media">
-                                    <a class="thumbnail pull-left" href="#">
-                                        <img class="media-object" ng-src="{{ cartitem.product_image }}" style="width: 72px; height: 72px;">
+                                    <a class="pull-left">
+                                        <img ng-src="{{ cartitem.product_image }}">
                                     </a>
                                     <div class="media-body">
                                         <h4 class="media-heading">
-                                            <a href="#">{{ cartitem.product_name }}</a>
+                                            {{ cartitem.product_name }}
                                         </h4>
                                         <p>{{ cartitem.product_desc }}</p>
                                     </div>
                                 </div>
                             </td>
                             <td class="col-sm-1 col-md-1" style="text-align: center">
-                                <input type="number" min="1" ng-model="cartitem.productQty" ng-change="updateQty()">
+                                <input class="qty-input" type="number" min="0" ng-model="cartitem.productQty" ng-change="updateQty()" />
+                                x
                             </td>
+
                             <td class="col-sm-1 col-md-1 text-center">
                                 <strong>{{ cartitem.product_price | currency }}</strong>
                             </td>

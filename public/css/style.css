@@ -311,6 +311,15 @@ section h3.section-subheading {
     border-color: #FED136;
 }
 
+.qty-label {
+    margin-left: 40px;
+}
+
+.qty-input {
+    width: 50px;
+    margin-left: 10px;
+}
+
 .go2-cartBtn {
     margin-top: 50px;
     color: #FED136;

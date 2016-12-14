@@ -27,11 +27,11 @@ app.use(express.static(__dirname + '/public'));
 let endpoints = ['customers', 'products', 'orders', 'order_details'];
 
 endpoints.forEach(endpoint => {
-    app.get(`/api/${endpoint}/:id`, restCtrl.read(endpoint));
-    app.get(`/api/${endpoint}/`, restCtrl.readList(endpoint));
-    app.post(`/api/${endpoint}/`, restCtrl.create(endpoint));
-    app.put(`/api/${endpoint}/:id`, restCtrl.update(endpoint));
-    app.delete(`/api/${endpoint}/:id`, restCtrl.delete(endpoint));
+  app.post(`/api/${endpoint}/`, restCtrl.create(endpoint));
+  app.get(`/api/${endpoint}/:id`, restCtrl.read(endpoint));
+  app.get(`/api/${endpoint}/`, restCtrl.readList(endpoint));
+  app.put(`/api/${endpoint}/:id`, restCtrl.update(endpoint));
+  app.delete(`/api/${endpoint}/:id`, restCtrl.delete(endpoint));
 });
 
 app.listen(port, () => {
