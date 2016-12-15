@@ -517,6 +517,10 @@ footer ul.quicklinks {
     text-decoration: none;
 }
 
+.mtnIcon {
+    height: 43px;
+}
+
 ul.social-buttons {
     margin-bottom: 0;
 }
